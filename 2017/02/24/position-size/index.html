@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hello world," />
+  <meta name="keywords" content="js,jquery," />
 
 
 
@@ -87,19 +87,46 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="工作中有一个很常见的需求，hover或者click某元素后，在该元素旁边出现弹框，主要就是获取该元素的位置坐标以及元素所占区块的大小。最近工作中就遇到了，发现js和jquery的实现方法有很大的区别，这里总结一下，备忘。
+
+
+
+获取元素的相对位置信息
+
+原生js方法
+  12var x = obj.offsetLeft,    y = obj.offsetTop;
+
+jquery方法
+  123">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/02/15/hello-world/index.html">
+<meta property="og:title" content="获取元素位置信息和所占空间大小(via:js&jquery)">
+<meta property="og:url" content="http://yoursite.com/2017/02/24/position-size/index.html">
 <meta property="og:site_name" content="Eric's Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2017-02-15T09:56:33.361Z">
+<meta property="og:description" content="工作中有一个很常见的需求，hover或者click某元素后，在该元素旁边出现弹框，主要就是获取该元素的位置坐标以及元素所占区块的大小。最近工作中就遇到了，发现js和jquery的实现方法有很大的区别，这里总结一下，备忘。
+
+
+
+获取元素的相对位置信息
+
+原生js方法
+  12var x = obj.offsetLeft,    y = obj.offsetTop;
+
+jquery方法
+  123">
+<meta property="og:updated_time" content="2017-02-24T08:19:22.753Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="获取元素位置信息和所占空间大小(via:js&jquery)">
+<meta name="twitter:description" content="工作中有一个很常见的需求，hover或者click某元素后，在该元素旁边出现弹框，主要就是获取该元素的位置坐标以及元素所占区块的大小。最近工作中就遇到了，发现js和jquery的实现方法有很大的区别，这里总结一下，备忘。
+
+
+
+获取元素的相对位置信息
+
+原生js方法
+  12var x = obj.offsetLeft,    y = obj.offsetTop;
+
+jquery方法
+  123">
 
 
 
@@ -127,13 +154,13 @@ Quick">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/15/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/24/position-size/"/>
 
 
 
 
 
-  <title> Hello World | Eric's Blog </title>
+  <title> 获取元素位置信息和所占空间大小(via:js&jquery) | Eric's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -250,7 +277,7 @@ Quick">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/15/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/24/position-size/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Eric">
@@ -274,7 +301,7 @@ Quick">
             
             
               
-                Hello World
+                获取元素位置信息和所占空间大小(via:js&jquery)
               
             
           </h1>
@@ -289,8 +316,8 @@ Quick">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-15T16:05:19+08:00">
-                2017-02-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-24T10:49:11+08:00">
+                2017-02-24
               </time>
             
 
@@ -325,15 +352,43 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <blockquote>
+<p>工作中有一个很常见的需求，hover或者click某元素后，在该元素旁边出现弹框，主要就是获取该元素的位置坐标以及元素所占区块的大小。最近工作中就遇到了，发现js和jquery的实现方法有很大的区别，这里总结一下，备忘。</p>
+</blockquote>
+<hr>
+<ol>
+<li><p><strong>获取元素的相对位置信息</strong></p>
+<ul>
+<li><p>原生js方法</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = obj.offsetLeft,</div><div class="line">    y = obj.offsetTop;</div></pre></td></tr></table></figure>
+</li>
+<li><p>jquery方法</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> _offset = $obj.offset(),</div><div class="line">    x = _offset.left,</div><div class="line">    y = _offset.top;</div></pre></td></tr></table></figure>
+<p>这两个方法看起来相似，其实有很大的不同.</p>
+</li>
+</ul>
+<ol>
+<li>原生js获取位置的参考信息是：父辈元素中的定位元素，即非static(默认值)的元素。而juqery方法始终返回相对于文档的偏移。</li>
+<li>当父元素有滚动条的时候，两者的情况也是不同的。js会把滚动的距离也算在相应的偏移量中，而jquery的值不受滚动条的影响。<br>综合以上两点不同可以看出：当父元素不会出现滚动条且父辈元素的定位属性都统一(即参考点要相同)的时候，可以用原生方法获取位置信息，弹框用相对定位(相对于上面提到的参考点).jquery则相对简单很多，因为他的计算始终相对于文档，所以弹框用fixed定位即可。</li>
+</ol>
+</li>
+<li><p><strong>获取元素所占区块的大小</strong></p>
+<ul>
+<li><p>原生js方法</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 方法1</span></div><div class="line"><span class="keyword">var</span> _width = obj.style.width,</div><div class="line">    _height = obj.style.height;</div><div class="line"><span class="comment">// 方法2</span></div><div class="line"><span class="keyword">var</span> _width = obj.offsetWidth,</div><div class="line">    _height = obj.offsetHeight;</div></pre></td></tr></table></figure>
+<p>  其中方法一基本可以忽略，因为他只能获取到内敛样式。当然可以代替他的方法也有，情参考<a href="https://erichui0906.github.io/2017/02/24/getCss/" target="_blank" rel="external">通过原生js获取元素的样式</a></p>
+</li>
+<li><p>jquery方法</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取高度的方法类似</span></div><div class="line"><span class="keyword">var</span> _width1 = $obj.width(),</div><div class="line">    _width2 = $obj.innerWidth(),</div><div class="line">    _width3 = $obj.outerWidth(),</div><div class="line">    _width4 = $obj.outerWidth(<span class="literal">true</span>);</div></pre></td></tr></table></figure>
+<p>  有多重方法可以获取元素的大小，下面分别介绍异同。由盒模型可以知道，元素所占空间大小 = width + padding + border + margin; 所以可以得到以下对应关系：</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">_width1 = width;</div><div class="line">_width2 = width + padding;</div><div class="line">_width3 = width + padding + border;</div><div class="line">_width4 = width + padding + border + marign;</div></pre></td></tr></table></figure>
+<p>  原生js方法2获取的宽度_width相当于jquery的方放获取到的_width3;</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>根据以上获取到的信息就可以定位弹框的位置了：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$popup.css(&#123; <span class="comment">// 此处把弹框定位在元素的右侧居中位置</span></div><div class="line">    left: x + _width,</div><div class="line">    <span class="attr">top</span>: y + _height/<span class="number">2</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -357,7 +412,9 @@ Quick">
       
         <div class="post-tags">
           
-            <a href="/tags/hello-world/" rel="tag"># hello world</a>
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+            <a href="/tags/jquery/" rel="tag"># jquery</a>
           
         </div>
       
@@ -370,14 +427,18 @@ Quick">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/02/15/randomNum/" rel="next" title="真的了解js生成随机数吗">
+                <i class="fa fa-chevron-left"></i> 真的了解js生成随机数吗
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/15/randomNum/" rel="prev" title="真的了解js生成随机数吗">
-                真的了解js生成随机数吗 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/24/getCss/" rel="prev" title="原生js获取元素的样式信息">
+                原生js获取元素的样式信息 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -425,17 +486,8 @@ Quick">
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -484,22 +536,6 @@ Quick">
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
