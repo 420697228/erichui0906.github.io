@@ -101,7 +101,7 @@
 
 生成任意区间的整数
 全闭区间[n,m] 这种的最常见，大家都知道的那一长串公式：Math.floor(Math.rando">
-<meta property="og:updated_time" content="2017-02-15T09:53:04.294Z">
+<meta property="og:updated_time" content="2017-03-08T07:58:08.707Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="真的了解js生成随机数吗">
 <meta name="twitter:description" content="由js生成一切随机数的基础都是Math.random()，这个方法比较特别，生成的随机数落在的区间是[0,1)，进行一次操作的话，js只能生成一个类似于[n,m)这样，左闭右开的区间。所以当有一些特殊需求的时候，就势必要进行一些其它的操作，下面对各种需求进行简单的分析:
@@ -340,7 +340,7 @@
 <hr>
 <h3 id="生成任意区间的整数"><a href="#生成任意区间的整数" class="headerlink" title="生成任意区间的整数"></a>生成任意区间的整数</h3><ol>
 <li><p><strong>全闭区间[n,m]</strong><br> 这种的最常见，大家都知道的那一长串公式：<strong><code>Math.floor(Math.random()*(m-n+1))+n;</code></strong> 就是生成这个全闭区间的方法。说到这个公式很多人都知道，但真正想明白的人估计很少。先生成一个[0,m-n+1)这样左闭右开的区间，然后用<code>Math.floor()</code>取到[0,m-n]之间内的任意整数（看明白这一步很关键），之后加上区间左端点变成[n,m]内的任意整数，达到目的。</p>
-<p> 说到这个地方，有一点必须提一下，随便搜一下<code>js</code>生成随机数，有很多文章都会用<code>Math.ceil()</code>或<code>Math.round()</code>这两个方法，比如生成全闭的[n,m]区间内的任意整数，<code>Math.ceil(Math.random()*(m-n))+n;</code>或者<code>Math.round(Math.random()*(m-n))+n;</code>我感觉随机数，最重要的就是<strong>随机</strong>两个字，每个值取到的概率一定要相等，这一点对于一些特定的场合非常重要，比如抽奖（年会都有抽奖的吧）。<code>Math.ceil()</code>的毛病是x≈m&gt;&gt;n，x为除端点之外的数，区间足够大的话n几乎取不到，m和x的概率几乎相等，因为m这个点取不到所以概率相对来说小了一点。<code>Math.round()</code>的毛病是n≈m=x/2,原因和前面的差不多，不明白的可以自己画个坐标轴，很明了。</p>
+<p> 说到这个地方，有一点必须提一下，随便搜一下<code>js</code>生成随机数，有很多文章都会用<code>Math.ceil()</code>或<code>Math.round()</code>这两个方法，比如生成全闭的[n,m]区间内的任意整数，<code>Math.ceil(Math.random()*(m-n))+n;</code>或者<code>Math.round(Math.random()*(m-n))+n;</code>我感觉随机数，最重要的就是<strong>随机</strong>两个字，每个值取到的概率一定要相等，这一点对于一些特定的场合非常重要，比如抽奖（年会都有抽奖的吧）。<code>Math.ceil()</code>的毛病是x≈m&gt;&gt;n，x为除端点之外的数，区间足够大的话n几乎取不到，m和x的概率几乎相等，因为m这个点取不到所以概率相对来说小了一点。<code>Math.round()</code>的毛病是n=m=x/2,原因和前面的差不多，不明白的可以自己画个坐标轴，很明了。</p>
 </li>
 <li><p><strong>全开区间(x,y)</strong><br> 其实只要记住上面的全闭区间，其它所有区间的开闭，都可以由其推到，过程如下：<br> (x,y) ＝＝[x+1,y-1];也就是说n=x+1; m=y-1;将其代入上面的公式就可以得到：<code>Math.floor(Math.random()*(y-x-1))+x+1;</code></p>
 </li>
