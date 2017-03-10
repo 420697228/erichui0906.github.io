@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="js,css," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -87,40 +87,46 @@
 
 
 
-<meta name="description" content="工作中经常会需要获取DOM元素的样式，之前都是通过jquery的css()方法，现在总结一下通过原生js获取元素样式的方法。
+<meta name="description" content="webpack的使用
+loader
+js  babel-core  babel-loader  babel-preset-es2015
+css  style-loader  css-loader
+img  file-loader  url-loader
 
 
+plugin
 
-obj.style
-  1var _width = obj.style.width;
-  该方法基本可以忽略，因为他只能获取到内敛样式。而现在很少会写内联样式。当然他有个好处是可读可写，所以可以据此设置元素的样式。
-
-window.getComputedStyle">
+extract-text-webpack-plugin  可以将打包进bundle的样式分离出来，放在单独的样式文件里
+web">
 <meta property="og:type" content="article">
-<meta property="og:title" content="原生js获取元素的样式信息">
-<meta property="og:url" content="http://yoursite.com/2017/02/24/getCss/index.html">
+<meta property="og:title" content="Eric's Blog">
+<meta property="og:url" content="http://yoursite.com/2017/03/10/webpack/index.html">
 <meta property="og:site_name" content="Eric's Blog">
-<meta property="og:description" content="工作中经常会需要获取DOM元素的样式，之前都是通过jquery的css()方法，现在总结一下通过原生js获取元素样式的方法。
+<meta property="og:description" content="webpack的使用
+loader
+js  babel-core  babel-loader  babel-preset-es2015
+css  style-loader  css-loader
+img  file-loader  url-loader
 
 
+plugin
 
-obj.style
-  1var _width = obj.style.width;
-  该方法基本可以忽略，因为他只能获取到内敛样式。而现在很少会写内联样式。当然他有个好处是可读可写，所以可以据此设置元素的样式。
-
-window.getComputedStyle">
-<meta property="og:updated_time" content="2017-02-24T08:19:13.109Z">
+extract-text-webpack-plugin  可以将打包进bundle的样式分离出来，放在单独的样式文件里
+web">
+<meta property="og:updated_time" content="2017-03-10T03:21:52.642Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="原生js获取元素的样式信息">
-<meta name="twitter:description" content="工作中经常会需要获取DOM元素的样式，之前都是通过jquery的css()方法，现在总结一下通过原生js获取元素样式的方法。
+<meta name="twitter:title" content="Eric's Blog">
+<meta name="twitter:description" content="webpack的使用
+loader
+js  babel-core  babel-loader  babel-preset-es2015
+css  style-loader  css-loader
+img  file-loader  url-loader
 
 
+plugin
 
-obj.style
-  1var _width = obj.style.width;
-  该方法基本可以忽略，因为他只能获取到内敛样式。而现在很少会写内联样式。当然他有个好处是可读可写，所以可以据此设置元素的样式。
-
-window.getComputedStyle">
+extract-text-webpack-plugin  可以将打包进bundle的样式分离出来，放在单独的样式文件里
+web">
 
 
 
@@ -148,13 +154,13 @@ window.getComputedStyle">
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/24/getCss/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/10/webpack/"/>
 
 
 
 
 
-  <title> 原生js获取元素的样式信息 | Eric's Blog </title>
+  <title>  | Eric's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -271,7 +277,7 @@ window.getComputedStyle">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/24/getCss/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/webpack/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Eric">
@@ -295,7 +301,7 @@ window.getComputedStyle">
             
             
               
-                原生js获取元素的样式信息
+                
               
             
           </h1>
@@ -310,8 +316,8 @@ window.getComputedStyle">
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-24T15:12:22+08:00">
-                2017-02-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T11:20:22+08:00">
+                2017-03-10
               </time>
             
 
@@ -346,24 +352,24 @@ window.getComputedStyle">
       
 
       
-        <blockquote>
-<p>工作中经常会需要获取DOM元素的样式，之前都是通过jquery的css()方法，现在总结一下通过原生js获取元素样式的方法。</p>
-</blockquote>
-<hr>
-<ul>
-<li><p><strong>obj.style</strong></p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> _width = obj.style.width;</div></pre></td></tr></table></figure>
-<p>  该方法基本可以忽略，因为他只能获取到内敛样式。而现在很少会写内联样式。当然他有个好处是可读可写，所以可以据此设置元素的样式。</p>
-</li>
-<li><p><strong>window.getComputedStyle</strong></p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 语法如下： window.getComputedStyle('元素','伪元素');</span></div><div class="line"><span class="keyword">var</span> _css = <span class="built_in">window</span>.getComputedStyle(obj,<span class="literal">null</span>); <span class="comment">// 不涉及伪元素的可以传null</span></div><div class="line"><span class="keyword">var</span> _width = _css.getPropertyValue(<span class="string">'width'</span>); <span class="comment">// _css.width</span></div></pre></td></tr></table></figure>
-<p>  该方法对样式可读不可写，返回一个描述元素最终样式的对象。获取某一个样式的值，可以像访问对象属性那样访问，但建议使用getPropertyValue(propertyName)方法获取(此处属性名不支持Camel-Case,所以要用类似’background-color’)。可惜的是该方法在IE低版本(&lt;IE8)是不支持的，所以IE下可以用下面的方法。</p>
-</li>
-<li><p><strong>obj.currentStyle</strong></p>
-  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> _css = obj.currentStyle;</div><div class="line"><span class="keyword">var</span> _width = _css.getAttribute(<span class="string">'width'</span>); <span class="comment">// _css.width</span></div></pre></td></tr></table></figure>
-<p>  该属性是IE自己的一个属性，也是可读不可写的。需要注意的是此处获取具体样式值的时候，getAttribute(propertyName),其中属性名必须是驼峰式命名。</p>
-</li>
+        <h3 id="webpack的使用"><a href="#webpack的使用" class="headerlink" title="webpack的使用"></a>webpack的使用</h3><ol>
+<li>loader<ul>
+<li>js<br>  babel-core<br>  babel-loader<br>  babel-preset-es2015</li>
+<li>css<br>  style-loader<br>  css-loader</li>
+<li>img<br>  file-loader<br>  url-loader</li>
 </ul>
+</li>
+<li><p>plugin</p>
+<ul>
+<li>extract-text-webpack-plugin<br>  可以将打包进bundle的样式分离出来，放在单独的样式文件里</li>
+<li>webpack-utf8-bom<br>  解决chtml文件乱码问题</li>
+</ul>
+</li>
+<li><p>path<br> 上面图片的url-loader和分离样式插件的配置中，如果写的是相对路径，参考点是output.path，而不是当前的配置文件webpack.config.js</p>
+</li>
+<li><p>提交代码的时候，源文件和打包后的文件都可以推上去，方便后面人维护。</p>
+</li>
+</ol>
 
       
     </div>
@@ -385,14 +391,6 @@ window.getComputedStyle">
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/js/" rel="tag"># js</a>
-          
-            <a href="/tags/css/" rel="tag"># css</a>
-          
-        </div>
-      
 
       
         
@@ -402,8 +400,8 @@ window.getComputedStyle">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/24/position-size/" rel="next" title="获取元素位置信息和所占空间大小(via:js&jquery)">
-                <i class="fa fa-chevron-left"></i> 获取元素位置信息和所占空间大小(via:js&jquery)
+              <a href="/2017/02/24/getCss/" rel="next" title="原生js获取元素的样式信息">
+                <i class="fa fa-chevron-left"></i> 原生js获取元素的样式信息
               </a>
             
           </div>
@@ -411,10 +409,6 @@ window.getComputedStyle">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/10/webpack/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -461,8 +455,17 @@ window.getComputedStyle">
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -511,6 +514,22 @@ window.getComputedStyle">
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#webpack的使用"><span class="nav-number">1.</span> <span class="nav-text">webpack的使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>
